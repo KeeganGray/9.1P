@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String CREATE_USER_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "(" + Util.ID + " INTEGER PRIMARY KEY , " + Util.CONDITION + " TEXT, " + Util.NAME + " TEXT, " + Util.PHONE + " TEXT, " + Util.DESC + " TEXT, " + Util.DATE + " TEXT, " + Util.LOC + " TEXT)";
+        String CREATE_USER_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "(" + Util.ID + " INTEGER PRIMARY KEY , " + Util.CONDITION + " TEXT, " + Util.NAME + " TEXT, " + Util.PHONE + " TEXT, " + Util.DESC + " TEXT, " + Util.DATE + " TEXT, " + Util.LOC + " TEXT, " + Util.LAT + " TEXT, " + Util.LON + " TEXT)";
         sqLiteDatabase.execSQL(CREATE_USER_TABLE);
     }
 
@@ -38,6 +38,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(Util.DESC, newLostArticle.Description);
         contentValues.put(Util.DATE, newLostArticle.Date);
         contentValues.put(Util.LOC, newLostArticle.Location);
+        contentValues.put(Util.LAT, newLostArticle.Latitude);
+        contentValues.put(Util.LON, newLostArticle.Longitude);
         long newRowId = db.insert(Util.TABLE_NAME, null, contentValues);
         db.close();
         return newRowId;

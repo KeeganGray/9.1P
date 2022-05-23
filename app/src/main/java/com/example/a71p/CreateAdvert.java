@@ -65,8 +65,6 @@ public class CreateAdvert extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
         return inflater.inflate(R.layout.fragment_create_advert, container, false);
     }
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
@@ -75,6 +73,7 @@ public class CreateAdvert extends Fragment {
         descIn = view.findViewById(R.id.descIn);
         dateIn = view.findViewById(R.id.dateIn);
         locationIn = view.findViewById(R.id.locationIn);
+
 
     }
 

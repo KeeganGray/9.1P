@@ -2,7 +2,7 @@ package com.example.a71p.util;
 
 public class Util {
     public static final int DATABASE_VERSION=1;
-    public static final String DATABASE_NAME="lostarticlestable.db";
+    public static final String DATABASE_NAME="lostarticlemaptest.db";
     public static final String TABLE_NAME = "lost_articles";
 
     public static final String ID="id";
@@ -12,4 +12,7 @@ public class Util {
     public static final String DESC="description";
     public static final String DATE="date";
     public static final String LOC="location";
+    public static final String LAT="latitude";
+    public static final String LON="longitude";
+    public static final String PLACES_KEY="AIz~~~~~~"; //my key here
 }

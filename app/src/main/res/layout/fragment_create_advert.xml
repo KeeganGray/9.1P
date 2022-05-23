@@ -112,12 +112,40 @@
             android:ems="10"
             android:inputType="textPersonName" />
 
+        <TextView
+            android:id="@+id/locationSearchText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location Search:" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="tryPlaces"
+                android:text="Search for location" />
+
+            <Button
+                android:id="@+id/getButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="getPlace"
+                android:text="Current location" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="dbInsert"
             android:text="Save" />
+
     </LinearLayout>
 
 </FrameLayout>

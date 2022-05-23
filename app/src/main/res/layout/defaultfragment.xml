@@ -26,6 +26,13 @@
             android:onClick="selectFragment"
             android:text="Show All Lost And Found Items" />
 
+        <Button
+            android:id="@+id/mapShowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mapShowArticles"
+            android:text="Show On Map" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
